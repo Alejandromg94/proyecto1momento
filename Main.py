@@ -41,3 +41,24 @@ def ver_promedio():
     
     promedio = sum(estudiantes[nombre]) / len(estudiantes[nombre])
     print(f" El promedio de {nombre} es: {promedio:.2f}")      
+
+while True:
+    print("MENÚ")
+    print("1. Registrar ingreso")
+    print("2. Registrar nota")
+    print("3. Ver promedio")
+    print("4. Salir")
+
+    opcion = int(input("Ingrese una opcion: "))
+
+    match opcion:
+        case 1:
+            registrar_ingreso()
+        case 2:
+            registrar_nota()
+        case 3:
+            ver_promedio()
+        case 4: 
+           break
+        case _:
+            print("Opción inválida")
