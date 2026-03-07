@@ -27,3 +27,17 @@ def registrar_nota():
     
     except ValueError:
         print(" Debe ingresar un número válido.")
+        
+def ver_promedio():
+    nombre = input("Ingrese el nombre del estudiante: ")
+   
+    if nombre not in estudiantes:
+        print(" El estudiante no está registrado.")
+        return
+    
+    if len(estudiantes[nombre]) == 0:
+        print("El estudiante no tiene notas registradas.")
+        return
+    
+    promedio = sum(estudiantes[nombre]) / len(estudiantes[nombre])
+    print(f" El promedio de {nombre} es: {promedio:.2f}")      
